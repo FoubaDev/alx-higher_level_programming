@@ -1,20 +1,2 @@
 #!/bin/bash
-
-# Get the Python file name
-
-pyfile=$PYFILE
-
-# Append 'c' to the file name
-
-outputfile="${pyfile}c"
-
-# Compile the Python file
-echo "Compiling $pyfile ..."
-python -m compileall -b $pyfile"
-
-# Check if the compilation was successful
-if [ -f "$outputfile" ]; then
-  echo "Compilation successful."
-else
-  echo "Compilation failed."
-fi
+echo "Compiling $PYFILE ...";python3 -m compileall -b "$PYFILE"
