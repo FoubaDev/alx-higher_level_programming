@@ -9,8 +9,8 @@ class Rectangle:
     Represents a rectangle.
 
     Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
+        __width (int): The width of the rectangle.
+        __height (int): The height of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
@@ -99,9 +99,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-        if (self.__width or self.__height) == 0:
-            return (0)
-        return (2 * (self.__width + self.__height))
 
     def __str__(self):
         """
@@ -111,8 +108,8 @@ class Rectangle:
             str: The string representation of the rectangle.
         """
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rectangle_str = ""
+            return ''
+        rectangle_str = ''
         for _ in range(self.__height):
             rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str
+        return (rectangle_str[:-1])
