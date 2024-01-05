@@ -14,6 +14,7 @@ class Rectangle:
         __height (int): The height of the rectangle.
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -114,7 +115,7 @@ class Rectangle:
             return ''
         rectangle_str = ''
         for _ in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
+            rectangle_str += str(self.print_symbol) * self.__width + "\n"
         return (rectangle_str[:-1])
 
     def __repr__(self):
