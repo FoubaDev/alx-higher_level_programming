@@ -1,21 +1,22 @@
 #!/usr/bin/python3
 
-"""Solve n-queens puzzle"""
+"""Solves the n-queens puzzle using iterative backtracking."""
 
 import sys
 
 
 def check_placement(board, row, col):
-    """Ensure the position of the queen at (row, col).
+    """Checks if placing a queen at (row, col) is valid.
 
     Args:
-        board (list): Placement of queens.
-        row (int): Row to check for valid placement.
-        col (int): Column to check for valid placement.
+        board: A list representing the placement of queens.
+        row: The row to check for valid placement.
+        col: The column to check for valid placement.
 
     Returns:
-        bool: True if the placement is valid, False otherwise.
+        True if the placement is valid, False otherwise.
     """
+
     for i in range(row):
         if board[i] == col or abs(row - i) == abs(col - board[i]):
             return False
@@ -23,14 +24,15 @@ def check_placement(board, row, col):
 
 
 def solve_n_queens(n):
-    """Uses iterative backtracking to solve the n-queens problem.
+    """Solves the n-queens problem using iterative backtracking.
 
     Args:
-        n (int): number of queens in the problem.
+        n: The number of queens in the problem.
 
     Returns:
-        list: A list of solutions.
+        A list of solutions, where each solution is a list of queen positions.
     """
+
     solutions = []
     stack = []
     row = 0
@@ -40,7 +42,8 @@ def solve_n_queens(n):
         if check_placement(stack, row, col):
             stack.append(col)
             if row == n - 1:
-                solutions.append(stack[:])  # Found a solution
+                # Found a solution
+                solutions.append(stack[:])
                 stack.pop()
                 col += 1
             else:
@@ -50,7 +53,7 @@ def solve_n_queens(n):
             col += 1
 
         while col >= n or (len(stack) >= row + 1 and col >= stack[row]):
-            if len(stack) == 0:
+            if not stack:
                 return solutions
             col = stack.pop() + 1
             row -= 1
@@ -58,13 +61,13 @@ def solve_n_queens(n):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: nqueens n", file=sys.stderr)
+        print("Usage: nqueens <n>", file=sys.stderr)
         sys.exit(1)
 
     try:
         n = int(sys.argv[1])
     except ValueError:
-        print("n must be a number", file=sys.stderr)
+        print("n must be an integer", file=sys.stderr)
         sys.exit(1)
 
     if n < 4:
