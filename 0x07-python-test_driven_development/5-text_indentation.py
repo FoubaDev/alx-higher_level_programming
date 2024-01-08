@@ -22,7 +22,7 @@ def text_indentation(text):
     for char in text:
         if char.isalnum():  # Check for alphanumeric characters
             sentence += char
-        elif sentence:  # If a sentence has been formed and punctuation is encountered
+        elif sentence:
             sentences.append(sentence.strip())
             sentence = ""  # Reset for the next sentence
 

@@ -20,8 +20,6 @@ size equal to 2
 size equal to 0
 
 	>>> print_square(0)
-	My name is Fouba 
-
 """
 
 """

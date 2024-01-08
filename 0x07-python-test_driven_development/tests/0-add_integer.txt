@@ -2,15 +2,13 @@
 
 ================import the function======================
 
->>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer = __import__('0-add_integer').add_integer
 
 """
 Add postive integer
 
 	>>> add_integer(1, 4)
 	5
-
-"""
 
 """
 Add postive and negative integer
@@ -80,3 +78,11 @@ Add int and none values
 	TypeError: b must be an integer
 
 """
+"""
+float overflow
+
+	>>> add_integer(1e100, 1e100)
+        2e+100
+      
+"""
+

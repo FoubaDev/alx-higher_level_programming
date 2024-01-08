@@ -1,0 +1,65 @@
+# LAGRE GABBA BERTRAND
+
+================import the function================
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+    
+m_a and m_b are respect the condidtion.
+
+    	>>> m_a = [[3, 2], [1, 5]]
+    	>>> m_b = [[15, 34], [2, 1]]
+    	>>> matrix_mul(m_a, m_b)
+    	[[49, 104], [25, 39]]
+
+
+Passing non-lists.
+
+	>>> m_a = ([23, 13], [4, 1])
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	TypeError: m_a must be a list
+
+Matrix is a string;
+
+    	>>> m_a = "10"
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+  	....
+  	TypeError: m_a must be a list
+
+Can't multiplied.
+    
+	>>> m_a = [[3, 2]]
+	>>> m_b = [[15, 34]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	ValueError: m_a and m_b can't be multiplied
+
+Passing a non-list in any element of matrix_divided
+    >>> m_a = [2, [3, 4]]
+    >>> m_b = [[1, 2], [3, 4]]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list of lists
+
+Passing a non-list in any element of matrix_divided
+    	
+    	>>> m_a = [[15, 34], [2, 1]]
+	>>> m_b = [1, 2, 3, 4]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+  	...
+  	TypeError: m_b must be a list of lists
+
+Passing an empty matrix.
+    >>> m_a = []
+    >>> m_b = [[3, 14], [2, 1]]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty
