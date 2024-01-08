@@ -1,0 +1,153 @@
+# LAGRE GABBA BERTRAND
+
+================import the function======================
+
+	>>> MyList = __import__('1-my_list').MyList
+
+"""
+Subclass
+
+	>>> my_list = MyList()
+	>>> issubclass(MyList, list)
+	True
+
+"""
+Instance
+
+	>>> my_list = MyList()
+	>>> isinstance(my_list, list)
+	True
+
+"""
+
+"""
+Find method in class
+
+	>>> my_list = MyList()
+	>>> 'print_sorted' in dir(MyList)
+	True
+
+"""
+
+"""
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(3)
+	>>> my_list.print_sorted()
+	[1, 2, 3, 3, 4]
+
+	
+"""
+
+"""
+	>>> my_list = MyList()
+	>>> my_list.append(7)
+	>>> my_list += [7]
+	>>> my_list.append(4)
+	>>> my_list.append(4)
+	>>> my_list += [4]
+	>>> my_list.print_sorted()
+	[4, 4, 4, 7, 7]
+
+"""
+
+"""
+	>>> my_list = MyList()
+	>>> my_list.append(-4)
+	>>> my_list.append(-14)
+	>>> my_list.append(-1)
+	>>> my_list.append(-0)
+	>>> my_list.append(-1)
+	>>> my_list.print_sorted()
+	[-14, -4, -1, -1, 0]
+
+"""
+
+"""
+
+	>>> my_list = MyList()
+	>>> my_list.append(-1)
+	>>> my_list.append(1)
+	>>> my_list.append(10)
+	>>> my_list.append(-4)
+	>>> my_list.print_sorted()
+	[-4, -1, 1, 10]
+
+"""
+
+"""
+
+	>>> my_list = MyList()
+	>>> my_list.append(-4)
+	>>> my_list.print_sorted()
+	[-4]
+
+"""
+
+"""
+
+	>>> my_list = MyList()
+	>>> my_list.append('-4')
+	>>> my_list.append('-5')
+	>>> my_list.append('6')
+	>>> my_list.append('0')
+	>>> my_list.print_sorted()
+	['-4', '-5', '0', '6']
+
+
+"""
+
+"""
+
+
+	>>> my_list = MyList()
+	>>> my_list.append('a')
+	>>> my_list.append('b')
+	>>> my_list.append('r')
+	>>> my_list.append('z')
+	>>> my_list.print_sorted()
+	['a', 'b', 'r', 'z']
+      
+"""
+
+"""
+
+	>>> my_list = MyList()
+	>>> my_list.append('-z')
+	>>> my_list.append('-a')
+	>>> my_list.append('z')
+	>>> my_list.append('g')
+	>>> my_list.print_sorted()
+	['-a', '-z', 'g', 'z']
+      
+"""
+
+"""
+
+	>>> my_list = MyList()
+   	>>> type(my_list)
+    	<class '1-my_list.MyList'>
+      
+"""
+
+   	>>> my_list = MyList()
+   	>>> my_list.print_sorted([1, 2])
+    	Traceback (most recent call last):
+    	...
+    	TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+    	>>> my_list = MyList()
+    	>>> my_list.print_sorted([1, 2], [3, 4])
+    	Traceback (most recent call last):
+    	...
+    	TypeError: print_sorted() takes 1 positional argument but 3 were given
+
+
+Empty list
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
