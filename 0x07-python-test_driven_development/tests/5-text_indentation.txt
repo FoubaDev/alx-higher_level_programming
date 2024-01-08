@@ -1,0 +1,46 @@
+# LAGRE GABBA BERTRAND
+
+================import the function======================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+"""
+first test
+
+	>>> text_indentation("This is a single sentence without any punctuation.")
+	Hi Lagre.
+	How are you?
+	This is a test sentence:
+	with some punctuation.
+
+"""
+
+"""
+second test
+
+	>>> text_indentation("This is a single sentence without any punctuation.")
+	This is a single sentence without any punctuation.
+
+"""
+
+"""	
+third test
+
+	>>> text_indentation("Multiple.  Sentences.  With.  Extra.  Whitespace.")
+	Multiple.
+	Sentences.
+	With.
+	Extra.
+	Whitespace.
+
+"""
+
+"""
+fourth test
+
+	>>> text_indentation(2023)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+"""
+

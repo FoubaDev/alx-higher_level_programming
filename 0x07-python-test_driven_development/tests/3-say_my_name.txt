@@ -1,0 +1,63 @@
+# LAGRE GABBA BERTRAND
+
+================import the function======================
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+"""
+firstname and lastname are string
+
+	>>> say_my_name("Fouba", "Bertrand")
+	My name is Fouba Bertrand
+
+"""
+
+"""
+Just firstname.
+
+	>>> say_my_name("Fouba")
+	My name is Fouba 
+
+"""
+
+"""
+lastname is not string.
+
+	>>> say_my_name("fouba", 123)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+"""
+
+"""
+firstname is not string.
+
+	>>> say_my_name(42, "Bertrand")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+"""
+
+"""
+firstname and lastname equal to "".
+
+	>>> say_my_name("", "")
+	My name is  
+
+"""
+
+"""
+Trainling espace around the firstname and lastname.
+
+	>>> say_my_name("  fouba  ", "  Bertrand  ")
+	My name is   fouba     Bertrand  
+
+"""
+
+"""
+Unusual characters.
+
+	>>> say_my_name("lâÄgre", "BËrtând")
+	My name is lâÄgre BËrtând
+ 
+"""

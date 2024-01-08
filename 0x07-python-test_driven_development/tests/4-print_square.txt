@@ -1,0 +1,52 @@
+# LAGRE GABBA BERTRAND
+
+================import the function======================
+
+>>> print_square = __import__('4-print_square').print_square
+
+"""
+size equal to 2
+
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+"""
+
+"""
+size equal to 0
+
+	>>> print_square(0)
+	My name is Fouba 
+
+"""
+
+"""
+size less than 0.	
+
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+"""
+
+"""
+size is a float.
+
+	>>> print_square(5.5)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+"""
+
+"""
+size not integer.
+
+	>>> print_square("lagre")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+"""

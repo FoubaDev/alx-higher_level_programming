@@ -1,0 +1,52 @@
+# LAGRE GABBA BERTRAND
+
+================import the function======================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+"""
+Row with same size, all int element divided by int divider
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+	[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+
+"""
+
+"""
+Row with different size
+
+	>>> matrix_divided([[1, 2, 3], [4, 5]], 2)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+"""
+
+"""
+Trying dividing a matrix with string value.
+
+	>>> matrix_divided([[1, 2, 'a']], 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix(list of lists)of integers/floats
+
+
+"""
+
+"""
+Divider is not  a number.
+
+	>>> matrix_divided([[1, 2, 3]], 'a') 
+	Traceback (most recent call last):
+	TypeError: div must be a number
+	
+"""
+
+"""
+Divider is 0.
+
+	>>> matrix_divided([[1, 2, 3]], 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+
+"""
