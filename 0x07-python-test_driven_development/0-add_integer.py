@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Add two integers"""
+
+"""Add two integers."""
 
 
 def add_integer(a, b=98):
@@ -7,18 +8,21 @@ def add_integer(a, b=98):
     Adds two integers.
 
     Args:
-        a (int of float) : first argument
-        b (int of float) : second argument.
+        a (int or float): The first argument.
+        b (int or float): The second argument. Default value is 98.
 
     Returns:
-        int : Addtion of a and b.
+        int: The addition of a and b.
+
     Raises:
-        TypeError: if a or b is not integer or float.
+        TypeError: If a or b is not an integer or a float.
     """
     if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
+        raise TypeError("a must be an integer or a float")
     if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
+        raise TypeError("b must be an integer or a float")
+
     a = int(a)
     b = int(b)
-    return a + b
+
+    return (a + b)
