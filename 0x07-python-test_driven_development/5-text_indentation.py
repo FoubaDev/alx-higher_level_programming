@@ -4,34 +4,18 @@
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each occurrence of '.', '?', and ':',
-    handling extra whitespace and sentence boundaries correctly.
+    Print a text with 2 new lines after each of these characters: ., ? and :.
 
     Args:
-        text (str): The input text.
-
-    Raises:
-        TypeError: If text is not a string.
+        text (str): the text to print.
     """
-
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    sentences = []
-    sentence = ""
-    for char in text:
-        if char.isalnum():  # Check for alphanumeric characters
-            sentence += char
-        elif sentence:
-            sentences.append(sentence.strip())
-            sentence = ""  # Reset for the next sentence
-
-        if char in ".?:":  # Add punctuation to the current sentence
-            sentence += char
-
-    if sentence:  # Append the last sentence if not empty
-        sentences.append(sentence.strip())
-
-    for sentence in sentences:
-        print(sentence)
-        print()  # Print newline after each sentence
+    line = ""
+    for c in range(len(text)):
+        line += text[c]
+        if text[c] in ".?:":
+            print((line + '\n').lstrip(' '))
+            line = ""
+    print(line.lstrip(' '), end='')
